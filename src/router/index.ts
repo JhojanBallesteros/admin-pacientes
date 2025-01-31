@@ -3,6 +3,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 import CalendarView from '@/views/CalendarView.vue'
 import ProfileView from '@/views/ProfileView.vue'
 import Dashboard from '../views/Dashboard/dashboard.vue'
+import path from 'path'
+import SigninView from '@/views/Authentication/SigninView.vue'
+import SignupView from '@/views/Authentication/SignupView.vue'
 
 
 const routes = [
@@ -30,6 +33,22 @@ const routes = [
       title: 'Profile'
     }
   },
+  {
+    path: '/signin',
+    name: 'signin',
+    component: SigninView,
+    meta: {
+      title: 'Signin'
+    }
+  },
+  {
+    path: '/signup',
+    name: 'signup',
+    component: SignupView,
+    meta: {
+      title: 'Signup'
+    }
+  }
  
 ]
 

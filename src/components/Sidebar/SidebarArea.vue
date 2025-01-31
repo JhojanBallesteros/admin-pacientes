@@ -6,6 +6,7 @@ import SidebarItem from './SidebarItem.vue'
 
 const target = ref(null)
 
+
 const sidebarStore = useSidebarStore()
 
 onClickOutside(target, () => {
@@ -87,7 +88,7 @@ const menuGroups = ref([
       <button class="block lg:hidden" @click="sidebarStore.isSidebarOpen = false">
         <svg
           class="fill-current"
-          width="20"
+          with="20"
           height="18"
           viewBox="0 0 20 18"
           fill="none"
@@ -107,8 +108,6 @@ const menuGroups = ref([
       <nav class="mt-5 py-4 px-4 lg:mt-9 lg:px-6">
         <template v-for="menuGroup in menuGroups" :key="menuGroup.name">
           <div>
-            <h3 class="mb-4 ml-4 text-sm font-medium text-bodydark2">{{ menuGroup.name }}</h3>
-
             <ul class="mb-6 flex flex-col gap-1.5">
               <SidebarItem
                 v-for="(menuItem, index) in menuGroup.menuItems"
